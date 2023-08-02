@@ -83,15 +83,15 @@ const CARRITO = new Carrito()
 
 Controlador.agregar(new Producto(1, "jabon", 100, 0))
 Controlador.agregar(new Producto(2, "Blue label", 1500, 0))
-Controlador.agregar(new Producto(4, "Jamon", 300, 0))
-Controlador.agregar(new Producto(5, "Doritos", 250, 0))
+Controlador.agregar(new Producto(3, "Jamon", 300, 0))
+Controlador.agregar(new Producto(4, "Doritos", 250, 0))
 
 let rta
 
 do{
-    CP.mostrarProductos()
+    Controlador.mostrarProductos()
     let opcion = Number(prompt("Ingrese el id del producto que desea agregar"))
-    let producto = CP.buscarProductoPorID(opcion)
+    let producto = Controlador.buscarProductoPorID(opcion)
     let cantidad = Number(prompt("Ingrese cuantas unidades quiere del producto"))
     CARRITO.agregar(producto,cantidad)
     alert("El producto fué añadido al carrito: ")
